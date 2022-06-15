@@ -95,22 +95,22 @@ function App() {
             <div className='right_image'>
               <img className='compHand' src={`../images/${compMove}.png`} alt='user'/>
             </div>
-
-            <div className='icons'>
-                <img className='image_icon' src={`../images/rock-icon.png`}/>
-                <img className='image_icon' src={`../images/scissor-icon.png`}/>
-                <img className='image_icon' src={`../images/paper-icon.png`}/>
-            </div>
           </div>
         </div>
+        <div className='footer'>
+
         <div className='result'>
-          <h1>{turn}</h1>
-          <h1>Final Result: {res}</h1>
+          <h2>{turn}</h2>
         </div>
         <div className='restart'>
           {gameover && 
+            
+            <h1>Final Result: {res}</h1>
+          }
+          {gameover && 
             <button className='button' onClick={()=>restart()}>Restart Game</button>
           }
+        </div>
         </div>
     </div>
   );
